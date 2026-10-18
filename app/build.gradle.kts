@@ -12,6 +12,11 @@ android {
         version = release(36)
     }
 
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.karimali.movieverse"
         minSdk = 24
