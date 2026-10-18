@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.navigation.safe.args)
+    alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -38,12 +41,38 @@ android {
 }
 
 dependencies {
+    // Core AndroidX & UI
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+
+    // Navigation Component (KTX version only)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+
+    // Dependency Injection (Hilt)
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+
+    // Networking (Retrofit & OkHttp)
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.gson)
+    implementation(libs.okhttp.logging.interceptor)
+
+    // Storage & Image Loading
+    implementation(libs.androidx.datastore.preferences)
+    implementation(libs.glide)
+
+    // Unit Testing
     testImplementation(libs.junit)
+    testImplementation(libs.coroutines.test)
+    testImplementation(libs.turbine)
+    testImplementation(libs.mockk)
+    testImplementation(libs.arch.core.testing)
+
+    // Instrumented UI Testing
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
