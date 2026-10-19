@@ -1,4 +1,4 @@
-package com.karimali.collectallandroidfeatures.core.presentation.base
+package com.karimali.movieverse.core.presentation.base
 
 import android.view.LayoutInflater
 import android.view.View
