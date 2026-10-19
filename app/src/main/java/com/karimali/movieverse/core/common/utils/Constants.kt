@@ -1,11 +1,15 @@
 package com.karimali.movieverse.core.common.utils
 
 import com.karimali.movieverse.R
+import com.karimali.movieverse.features.onboarding.data.models.OnboardingModel
 
 
-object Constants{
+object Constants {
 
-    const val AUTH_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjYTNlMjRlOTRmYzQ4NjM0ZjdmNTdiZjgyZmQ5YmU1ZCIsIm5iZiI6MTY3NjkyNTg4My41OTcsInN1YiI6IjYzZjNkYmJiMTUzNzZjMDA4MzM3NGFhYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.EE6Pdxwk9HxFfUZOK3AvUur5dJtD_rZ4ssPAjzs7HCE"
+    const val AUTH_TOKEN =
+        "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjYTNlMjRlOTRmYzQ4NjM0ZjdmNTdiZjgyZmQ5YmU1ZCIsIm5iZiI6MTY3NjkyNTg4My41OTcsInN1YiI6IjYzZjNkYmJiMTUzNzZjMDA4MzM3NGFhYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.EE6Pdxwk9HxFfUZOK3AvUur5dJtD_rZ4ssPAjzs7HCE"
+
+    const val ACCOUNT_ID = 17809764
 
 
     val topLevelDestinations = setOf<Int>(
@@ -17,7 +21,23 @@ object Constants{
 //    )
 
     val destinationsWithoutToolBar = setOf(
-        R.id.splashFragment
+        R.id.splashFragment,
+        R.id.onBoardingFragment,
+    )
+
+    val onBoardingList = arrayListOf(
+        OnboardingModel(
+            id = 0,
+            imageId = R.drawable.onboarding_one
+        ),
+        OnboardingModel(
+            id = 1,
+            imageId = R.drawable.onboarding_two
+        ),
+        OnboardingModel(
+            id = 2,
+            imageId = R.drawable.onboarding_three
+        ),
     )
 
 }

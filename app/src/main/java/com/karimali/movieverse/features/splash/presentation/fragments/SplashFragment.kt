@@ -70,13 +70,13 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>(
         }
 
         val direction =
-            if (isCompleted) {
-                // Todo go to home
+            if (isCompleted){
+                SplashFragmentDirections.actionSplashFragmentToHomeFragment()
             } else {
-                // Todo go to onboarding
+                SplashFragmentDirections.actionSplashFragmentToOnBoardingFragment()
             }
 
-//        navController.navigate(direction)
+        navController.navigate(direction)
     }
 
     private fun startLogoAnimation() {
@@ -102,7 +102,6 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>(
     }
 
     override fun onDestroyView() {
-        binding.ivLogo.clearAnimation()
         animatorSet?.cancel()
         animatorSet = null
         super.onDestroyView()
