@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Spacing Scale -->
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">12dp</dimen>
+    <dimen name="spacing_lg">16dp</dimen>
+    <dimen name="spacing_xl">24dp</dimen>
+    <dimen name="spacing_xxl">32dp</dimen>
+
+    <!-- Screen Padding -->
+    <dimen name="screen_horizontal_padding">16dp</dimen>
+    <dimen name="screen_vertical_padding">16dp</dimen>
+
+    <!-- Corner Radius -->
+    <dimen name="corner_radius_small">8dp</dimen>
+    <dimen name="corner_radius_default">12dp</dimen>
+    <dimen name="corner_radius_medium">16dp</dimen>
+    <dimen name="corner_radius_large">20dp</dimen>
+    <dimen name="corner_radius_extra_large">28dp</dimen>
+
+    <!-- Buttons -->
+    <dimen name="button_height">48dp</dimen>
+    <dimen name="button_corner_radius">12dp</dimen>
+    <dimen name="button_horizontal_padding">24dp</dimen>
+
+    <!-- Input Fields -->
+    <dimen name="input_height">52dp</dimen>
+    <dimen name="input_corner_radius">12dp</dimen>
+    <dimen name="input_horizontal_padding">16dp</dimen>
+
+    <!-- Movie Cards -->
+    <dimen name="movie_card_corner_radius">12dp</dimen>
+    <dimen name="movie_card_spacing">12dp</dimen>
+    <dimen name="movie_card_width">140dp</dimen>
+    <dimen name="movie_poster_aspect_ratio_width">2</dimen>
+    <dimen name="movie_poster_aspect_ratio_height">3</dimen>
+
+    <!-- Sections -->
+    <dimen name="section_spacing">24dp</dimen>
+    <dimen name="section_title_bottom_spacing">12dp</dimen>
+
+    <!-- Icons -->
+    <dimen name="icon_size_small">16dp</dimen>
+    <dimen name="icon_size_default">24dp</dimen>
+    <dimen name="icon_size_large">32dp</dimen>
+
+    <!-- Navigation Bar -->
+    <dimen name="bottom_nav_height">64dp</dimen>
+    <dimen name="bottom_nav_icon_size">24dp</dimen>
+
+</resources>

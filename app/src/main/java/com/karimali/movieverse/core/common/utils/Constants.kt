@@ -11,9 +11,11 @@ object Constants {
 
     const val ACCOUNT_ID = 17809764
 
-
-    val topLevelDestinations = setOf<Int>(
-
+    val topLevelDestinations = setOf(
+        R.id.homeFragment,
+        R.id.searchFragment,
+        R.id.favoriteFragment,
+        R.id.moreFragment,
     )
 
 //    val destinationsWithBottomNav = setOf(
@@ -23,7 +25,9 @@ object Constants {
     val destinationsWithoutToolBar = setOf(
         R.id.splashFragment,
         R.id.onBoardingFragment,
-    )
+        R.id.homeFragment,
+        R.id.moreFragment
+        )
 
     val onBoardingList = arrayListOf(
         OnboardingModel(

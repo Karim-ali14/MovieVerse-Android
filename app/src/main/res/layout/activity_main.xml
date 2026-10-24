@@ -36,12 +36,17 @@
         />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_bottom_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/nav_bottom_view"
+        android:background="@color/mv_surface_elevated"
+        app:elevation="0dp"
+        app:itemActiveIndicatorStyle="@null"
+        app:itemIconTint="@null"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/bottom_nav_menu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

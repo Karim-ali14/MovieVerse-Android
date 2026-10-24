@@ -17,6 +17,7 @@
             android:id="@+id/action_splashFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/onBoardingFragment"
         android:name="com.karimali.movieverse.features.onboarding.presentation.fragments.OnBoardingFragment"
@@ -26,9 +27,26 @@
             android:id="@+id/action_onBoardingFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.karimali.movieverse.features.home.presentation.fragment.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.karimali.movieverse.features.search.presentation.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.karimali.movieverse.features.favorites.presentation.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.karimali.movieverse.features.more.presentation.MoreFragment"
+        android:label="fragment_more"
+        tools:layout="@layout/fragment_more" />
+
 </navigation>

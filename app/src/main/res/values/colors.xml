@@ -13,6 +13,10 @@
     <color name="mv_surface">#11162B</color>
     <color name="mv_surface_elevated">#1A2038</color>
 
+    <!-- Component Specific: Indicators & Page Controls -->
+    <color name="mv_indicator_active">#7657FF</color>
+    <color name="mv_indicator_inactive">#656B83</color>
+
     <!-- Text Colors -->
     <color name="mv_text_primary">#F5F6FF</color>
     <color name="mv_text_secondary">#A4AAC4</color>
@@ -22,4 +26,17 @@
     <color name="mv_divider">#292F49</color>
     <color name="mv_error">#FF5C70</color>
     <color name="mv_success">#35D39A</color>
+
+    <!-- Input Fields -->
+    <color name="mv_input_background">#11162B</color>
+    <color name="mv_input_stroke">#292F49</color>
+    <color name="mv_input_stroke_focused">#7657FF</color>
+    <color name="mv_input_hint">#A4AAC4</color>
+
+    <!-- Black (50% Opacity) -->
+    <color name="mv_overlay_black_50">#80000000</color>
+
+    <!-- Black (0% Opacity) -->
+    <color name="mv_overlay_black_0">#00000000</color>
+
 </resources>

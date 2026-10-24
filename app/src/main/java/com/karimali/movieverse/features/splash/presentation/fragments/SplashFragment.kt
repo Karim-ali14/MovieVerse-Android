@@ -34,7 +34,8 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>(
     private val splashViewModel by viewModels<SplashViewModel>()
     private var animatorSet: AnimatorSet? = null
 
-
+    override val applyStatusBarInset: Boolean
+        get() = false
     private lateinit var animationFinished : CompletableDeferred<Unit>
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -42,7 +43,6 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>(
         animationFinished = CompletableDeferred()
         startLogoAnimation()
         observeOnboardingState()
-
     }
 
     private fun observeOnboardingState(){
