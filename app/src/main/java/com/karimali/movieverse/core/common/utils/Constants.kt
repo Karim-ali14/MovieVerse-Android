@@ -11,6 +11,8 @@ object Constants {
 
     const val ACCOUNT_ID = 17809764
 
+    const val IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500"
+
     val topLevelDestinations = setOf(
         R.id.homeFragment,
         R.id.searchFragment,
