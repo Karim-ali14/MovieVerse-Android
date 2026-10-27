@@ -36,9 +36,10 @@ class HomeViewModel @Inject constructor(
     }
 
     fun fetchHomeData() {
+        println("enter to Scope sdf $fetchDataJob")
         fetchDataJob?.cancel()
         fetchDataJob = viewModelScope.launch {
-            _homeDataState.value =  UiState.Loading
+            _homeDataState.emit(UiState.Loading)
             try {
                 val homeData = coroutineScope {
                     val topRated = async { fetchNowTopRatedMoviesUseCase() }
@@ -53,13 +54,14 @@ class HomeViewModel @Inject constructor(
                         nowPopularMovie = popular.await().movies,
                     )
                 }
-                _homeDataState.value = UiState.Success(homeData)
+                _homeDataState.emit( UiState.Success(homeData))
             } catch (e: CancellationException) {
+                println("enter to Scope cancellation ${e.localizedMessage}")
                 throw e
             } catch (e: Exception) {
-                _homeDataState.value = UiState.Error(
+                _homeDataState.emit(UiState.Error(
                     e.localizedMessage ?: "An unexpected error occurred"
-                )
+                ))
             }
 
         }
