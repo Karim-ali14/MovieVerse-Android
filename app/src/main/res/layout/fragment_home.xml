@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/screen_vertical_padding"
+    tools:context=".features.home.presentation.fragment.HomeFragment">
+
+    <!-- Home Header -->
+    <LinearLayout
+        android:id="@+id/header_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/screen_horizontal_padding"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/ivAppLogo"
+            android:layout_width="@dimen/icon_size_large"
+            android:layout_height="@dimen/icon_size_large"
+            android:contentDescription="@string/moviesverse"
+            android:src="@drawable/movieverse_icon" />
+
+        <TextView
+            android:id="@+id/tvAppTitle"
+            style="@style/TextAppearance.MovieVerse.Headline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="@dimen/spacing_md"
+            android:paddingEnd="@dimen/spacing_sm"
+            android:text="@string/moviesverse" />
+
+        <ImageView
+            android:id="@+id/ivNotifications"
+            android:layout_width="@dimen/icon_size_default"
+            android:layout_height="@dimen/icon_size_default"
+            android:src="@drawable/ic_stat_notification" />
+
+    </LinearLayout>
+
+    <!-- Movie Search -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilSearch"
+        style="@style/Widget.MovieVerse.TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/screen_horizontal_padding"
+        android:layout_marginTop="@dimen/spacing_md"
+        android:hint="@string/search_movies"
+        app:hintEnabled="false"
+        app:startIconDrawable="@drawable/ic_search_unselected"
+        app:startIconTint="@color/mv_input_stroke_selector"
+        app:layout_constraintTop_toBottomOf="@id/header_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSearch"
+            style="@style/Widget.MovieVerse.TextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/search_movies"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Featured Movies Banner -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp_banner"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginHorizontal="@dimen/screen_horizontal_padding"
+        android:layout_marginTop="@dimen/spacing_lg"
+        app:layout_constraintTop_toBottomOf="@id/tilSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_lg"
+        android:id="@+id/tabs_indicator"
+        android:background="@android:color/transparent"
+        app:tabBackground="@drawable/tab_indicator_selector"        app:layout_constraintTop_toBottomOf="@id/vp_banner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

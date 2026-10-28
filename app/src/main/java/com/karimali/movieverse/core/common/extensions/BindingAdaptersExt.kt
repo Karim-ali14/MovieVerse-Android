@@ -4,6 +4,7 @@ import android.graphics.drawable.Drawable
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
+import androidx.annotation.DrawableRes
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
@@ -69,6 +70,25 @@ fun ImageView.loadingImageUrl(
                 )
             )
         }
+    }
+}
+
+
+@BindingAdapter(value = ["loadingImageDrawable"])
+fun ImageView.loadingImageDrawable(
+    @DrawableRes drawableRes : Int
+){
+    if (drawableRes != 0){
+        Glide.with(this)
+            .load(drawableRes)
+            .into(this)
+    } else{
+        this.setImageDrawable(
+            AppCompatResources.getDrawable(
+                context,
+                R.drawable.ic_launcher_background
+            )
+        )
     }
 }
 
